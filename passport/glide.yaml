@@ -1,0 +1,3 @@
+package: go-commons/passport
+import:
+- package: github.com/kataras/iris
