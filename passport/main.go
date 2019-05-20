@@ -1,6 +1,9 @@
 package main
 
-   import "github.com/kataras/iris"
+   import (
+       "github.com/kataras/iris"
+       "go-commons/passport/controller"
+   )
 
    func main() {
      app := iris.Default()
@@ -24,6 +27,7 @@ package main
        ctx.JSON(iris.Map{"message": "Hello iris web framework."})
      })
 
+     app.Get("user/auth",user.authentication)
      // http://localhost:8080
      // http://localhost:8080/ping
      // http://localhost:8080/hello
