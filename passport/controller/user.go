@@ -1,15 +1,20 @@
 package controller
 
 import (
-	"fmt"
 	"github.com/kataras/iris"
 )
 
-func main(){
-	fmt.Println("Hello Controller!")
-}
 
-func authentication(){
+//type UserController struct {
+//
+//}
 
-	fmt.Println("Hello Controller!")
+//func (m *UserController) Authentication(b mvc.BeforeActivation){
+//	fmt.Println("Hello Controller!")
+//}
+
+func Authentication(ctx iris.Context) {
+	//user_id := ctx.Values().Get("auth_user_id").(uint)
+	//ctx.JSON(user_id)
+	ctx.JSON("get controller success!")
 }

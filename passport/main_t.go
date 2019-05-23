@@ -3,6 +3,7 @@ package main
 import (
 	"fmt"
 	"github.com/kataras/iris"
+	"go-commons/passport/controller"
 )
 
 func main(){
@@ -23,6 +24,8 @@ func main(){
 
 		ctx.JSON(tmp)
 	})
+
+	app.Get("/c",controller.Authentication)
 
 	app.Run(iris.Addr(":8080"))
 
