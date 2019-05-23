@@ -4,7 +4,7 @@ import (
 	"go-commons/passport/model"
 )
 
-var bases = map[int64]datamodels.Movie{
+var bases = map[int64]baseModel.UserInfo{
 	1:{
 		ID		:1000001,
 		Name	:"Jumpman",
