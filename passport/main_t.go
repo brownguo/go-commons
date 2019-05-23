@@ -18,6 +18,12 @@ func main(){
 		ctx.View("main_test.html")
 	})
 
+	app.Get("/getjson",func(ctx iris.Context){
+		tmp := "jsonstring."
+
+		ctx.JSON(tmp)
+	})
+
 	app.Run(iris.Addr(":8080"))
 
 }
