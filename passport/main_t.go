@@ -49,6 +49,20 @@ func main(){
 		context.WriteString(" User Info is Post Request , Deal is in handle func \n")
 	})
 
+
+	app.Get("/api/users/{isLogin:bool}", func(context context.Context) {
+		isLogin, err := context.Params().GetBool("isLogin")
+		if err != nil {
+			context.StatusCode(iris.StatusNonAuthoritativeInfo)
+			return
+		}
+		if isLogin {
+			context.WriteString(" 已登录 ")
+		} else {
+			context.WriteString(" 未登录 ")
+		}
+	})
+
 	app.Run(iris.Addr(":8080"))
 
 
