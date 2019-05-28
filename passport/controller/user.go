@@ -14,7 +14,7 @@ import (
 //}
 
 func Authentication(ctx iris.Context) {
-	//user_id := ctx.Values().Get("auth_user_id").(uint)
-	//ctx.JSON(user_id)
+	user_id := ctx.Values().Get("auth_user_id").(string)
+	ctx.JSON(user_id)
 	ctx.JSON("get controller success!")
 }
